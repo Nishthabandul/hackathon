@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Syllabus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .syllabus-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        .subject-select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            border: 1px solid #d1d5db;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .subject-select:hover {
+            border-color: #6366f1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .syllabus-content {
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .syllabus-list {
+            margin-top: 10px;
+        }
+        .syllabus-list ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .syllabus-list li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: #4a5568;
+        }
+        .syllabus-list li:hover {
+            background-color: #f7fafc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4a90e2;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Explore Exam Syllabus</h1>
+            <p class="mt-4">Select a subject to view the syllabus and start preparing!</p>
+        </div>
+        
+        <!-- Subject Dropdown -->
+        <div class="mb-6">
+            <label for="subject" class="block text-lg font-medium text-gray-700">Choose a Subject</label>
+            <select id="subject" class="subject-select" onchange="showSyllabus()">
+                <option value="">Select a subject</option>
+                <option value="math">Mathematics</option>
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="biology">Biology</option>
+            </select>
+        </div>
+
+        <!-- Syllabus Content for Different Subjects -->
+        <div id="math-syllabus" class="syllabus-content">
+            <h2 class="syllabus-title">Mathematics Syllabus</h2>
+            <div class="syllabus-list">
+                <ul>
+                    <li>Algebra</li>
+                    <li>Calculus</li>
+                    <li>Linear Algebra</li>
+                    <li>Probability & Statistics</li>
+                    <li>Geometry</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="physics-syllabus" class="syllabus-content">
+            <h2 class="syllabus-title">Physics Syllabus</h2>
+            <div class="syllabus-list">
+                <ul>
+                    <li>Mechanics</li>
+                    <li>Thermodynamics</li>
+                    <li>Electromagnetism</li>
+                    <li>Optics</li>
+                    <li>Modern Physics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="chemistry-syllabus" class="syllabus-content">
+            <h2 class="syllabus-title">Chemistry Syllabus</h2>
+            <div class="syllabus-list">
+                <ul>
+                    <li>Organic Chemistry</li>
+                    <li>Inorganic Chemistry</li>
+                    <li>Physical Chemistry</li>
+                    <li>Analytical Chemistry</li>
+                    <li>Biochemistry</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="biology-syllabus" class="syllabus-content">
+            <h2 class="syllabus-title">Biology Syllabus</h2>
+            <div class="syllabus-list">
+                <ul>
+                    <li>Cell Biology</li>
+                    <li>Genetics</li>
+                    <li>Ecology</li>
+                    <li>Human Physiology</li>
+                    <li>Plant Biology</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSyllabus() {
+            // Hide all syllabus content sections
+            document.querySelectorAll('.syllabus-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Get the selected subject
+            var subject = document.getElementById('subject').value;
+
+            // Display the corresponding syllabus section
+            if (subject) {
+                document.getElementById(subject + '-syllabus').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
