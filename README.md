@@ -39,7 +39,9 @@ Our goal is to make learning engaging, accessible, and effective! 🌟
 ## 📸 **Screenshots**  
 
 ### **🏠 Homepage**  
-![Homepage Screenshot](./screenshots/homepage.png)  
+![Homepage Screenshot](./screenshots/homepage.png)
+![image](https://github.com/user-attachments/assets/fe16f10e-0db5-4f24-8ff4-57e692f97a6f)
+
 
 ### **👤 User Profile**  
 ![User Profile Screenshot](./screenshots/user-profile.png)  
@@ -141,9 +143,9 @@ Together, let’s make this platform even better! 🚀
 ## 📬 **Contact**  
 
 For questions or feedback, reach out:  
-- **Name**: Your Name  
-- 📧 **Email**: your-email@example.com  
-- 🐙 **GitHub**: [your-username](https://github.com/your-username)  
+- **Name**: Nishtha Bandul 
+- 📧 **Email**: nishtha084bteceai23@igdtuw.ac.in 
+
 
 ---
 
