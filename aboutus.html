@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .card p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .team-section {
+            margin-top: 80px;
+        }
+        .team-card {
+            margin-top: 40px;
+        }
+        .team-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .team-card img:hover {
+            transform: scale(1.1);
+        }
+        .team-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 20px;
+        }
+        .team-card p {
+            font-size: 1.125rem;
+            color: #4a5568;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .team-card .role {
+            font-size: 1rem;
+            color: #2b6cb0;
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            background-color: #2b6cb0;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #3182ce;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Page Title -->
+        <div class="section-title">
+            <h1>About Us</h1>
+            <p class="text-lg text-gray-600">Empowering students through a community-driven platform for entrance exam preparation.</p>
+        </div>
+
+        <!-- Community Overview -->
+        <div class="card">
+            <h3>Welcome to Our Community</h3>
+            <p>
+                We are a passionate community dedicated to providing students with the resources they need to excel in their entrance exams. Our platform enables students to share study materials, discuss topics with peers, and access valuable resources for preparation. 
+            </p>
+            <p class="mt-4">
+                Our mission is to build a collaborative space where students can engage, learn from each other, and work together to achieve success. With contributions from students worldwide, our platform brings together various resources, including notes, exam tips, and study strategies to help you succeed in your entrance exam.
+            </p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card">
+            <h3>How It Works</h3>
+            <p>
+                The platform is designed to make your preparation journey easier and more interactive. Here's how you can make the most of it:
+            </p>
+            <ul class="mt-4 list-disc pl-6 space-y-2">
+                <li>Access and share high-quality study notes for various subjects.</li>
+                <li>Participate in lively discussion forums to ask questions, share knowledge, and connect with others.</li>
+                <li>Stay up-to-date with the latest syllabus and exam patterns.</li>
+                <li>Upload your own notes and help others in the community succeed.</li>
+                <li>Get motivated and stay focused with the support of our student network.</li>
+            </ul>
+        </div>
+
+        <!-- Our Team Section -->
+        <div class="team-section">
+            <h2 class="section-title">Our Mentors</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Team Member 1 -->
+                <div class="team-card text-center mx-6">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Team Member 1" class="mx-auto">
+                    <h4>Arun Sharma</h4>
+                    <p class="role">Expert</p>
+                    <p>Excelllence in Maths and physics and 20+ years of teaching experience</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-card text-center mx-6">
+                    <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Team Member 2" class="mx-auto">
+                    <h4>Aruna Tomar</h4>
+                    <p class="role">Community Manager</p>
+                    <p>Aruna is the heart of the community, ensuring that every student feels welcomed, motivated, and supported on their journey.</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-card text-center mx-6">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Team Member 3" class="mx-auto">
+                    <h4>Rajiv Ranjan</h4>
+                    <p class="role">Expert</p>
+                    <p>Expertise in indian history and 15+ years of experience.Mentored 50k+ students till now.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call-to-action Section -->
+        <div class="text-center mt-12">
+            <p class="text-xl font-semibold text-gray-800">Join us today and become a part of this amazing community of motivated students!</p>
+            <a href="#" class="cta-button mt-6">Join the Community</a>
+        </div>
+    </div>
+
+</body>
+</html>
