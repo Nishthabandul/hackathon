@@ -39,21 +39,25 @@ Our goal is to make learning engaging, accessible, and effective! 🌟
 ## 📸 **Screenshots**  
 
 ### **🏠 Homepage**  
-![Homepage Screenshot](./screenshots/homepage.png)
 ![image](https://github.com/user-attachments/assets/fe16f10e-0db5-4f24-8ff4-57e692f97a6f)
 
 
-### **👤 User Profile**  
-![User Profile Screenshot](./screenshots/user-profile.png)  
+### **👤 User SignUp/Registration**   
+![image](https://github.com/user-attachments/assets/98d5c0b9-1a29-4b1b-ade6-5a0a37bc01e6)
 
-### **🔗 Matchmaking System**  
-![Matchmaking Screenshot](./screenshots/matchmaking.png)  
 
 ### **📚 Resource Repository**  
-![Resource Repository Screenshot](./screenshots/resource-repository.png)  
+![image](https://github.com/user-attachments/assets/d847d8e8-23c2-4623-a4c6-5e96ec298991)
 
-### **💬 Discussion Forum**  
-![Discussion Forum Screenshot](./screenshots/discussion-forum.png)  
+
+### **💬 Discussion Forum**   
+![image](https://github.com/user-attachments/assets/e62340f8-5db2-4657-aba3-dfea54e19430)
+
+
+### **🤖 Notes Taking application** 
+![image](https://github.com/user-attachments/assets/a47d0b48-002c-4664-864a-32682b15f2ef)
+
+
 
 🖼️ *Find more visuals in the `/screenshots` directory!*  
 
