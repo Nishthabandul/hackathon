@@ -1,12 +1,7 @@
-Here’s an enhanced, visually appealing version of your **README.md** with markdown styling and emojis:  
-
----
 
 # 🎓 **Peer-Led Collaborative Learning and Resource Sharing Platform**  
 
 🚀 **Empowering students to learn together, share resources, and succeed in their academic journeys!**  
-
----
 
 ## ✨ **Overview**  
 This platform is a hub for undergraduate and master’s students to:  
@@ -15,8 +10,6 @@ This platform is a hub for undergraduate and master’s students to:
 ✅ **Resolve doubts through AI-powered forums**  
 
 Our goal is to make learning engaging, accessible, and effective! 🌟  
-
----
 
 ## 🛠️ **Features**  
 💼 **User Registration and Profiles**  
@@ -56,6 +49,11 @@ Our goal is to make learning engaging, accessible, and effective! 🌟
 
 ### **🤖 Notes Taking application** 
 ![image](https://github.com/user-attachments/assets/a47d0b48-002c-4664-864a-32682b15f2ef)
+
+
+### **🤖 Explore Exam Syllabus**
+![image](https://github.com/user-attachments/assets/c95812b6-bed1-4eee-b1cd-de16722b886e)
+
 
 
 
@@ -137,20 +135,13 @@ We ❤️ contributions!
 
 Together, let’s make this platform even better! 🚀  
 
----
 
 ## 📜 **License**  
 📖 This project is licensed under the [MIT License](LICENSE).  
 
----
 
 ## 📬 **Contact**  
 
 For questions or feedback, reach out:  
 - **Name**: Nishtha Bandul 
 - 📧 **Email**: nishtha084bteceai23@igdtuw.ac.in 
-
-
----
-
-Let me know if you'd like further customization or additional sections! 😊
