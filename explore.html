@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Notes Access</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #0984e3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .notes-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    select,
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    button {
+      background: #6c5ce7;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4e42c2;
+    }
+
+    .notes-list {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .note-item {
+      margin-bottom: 15px;
+    }
+
+    .note-item h4 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+      color: #2d3436;
+    }
+
+    .note-item p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="notes-container">
+    <h2>Explore and Upload Notes</h2>
+    <form id="exploreForm">
+      <div class="form-group">
+        <label for="subject">Select Subject</label>
+        <select id="subject" required>
+          <option value="" disabled selected>Choose a subject</option>
+          <option value="math">Mathematics</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+          <option value="english">English</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Explore Notes</button>
+      </div>
+    </form>
+    <div class="notes-list" id="notesList" hidden>
+      <h3>Available Notes:</h3>
+      <div id="notesContent"></div>
+    </div>
+
+    <form id="uploadForm" hidden>
+      <h3>Upload Your Notes</h3>
+      <div class="form-group">
+        <label for="topic">Topic</label>
+        <input type="text" id="topic" placeholder="Enter topic" required>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes Content</label>
+        <textarea id="notes" rows="4" placeholder="Enter your notes" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Upload Notes</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const notesDatabase = {
+      math: [
+        { topic: "Algebra", content: "Introduction to Algebra and basic formulas." },
+        { topic: "Calculus", content: "Fundamentals of differentiation and integration." }
+      ],
+      science: [
+        { topic: "Physics", content: "Laws of Motion and basic physics principles." },
+        { topic: "Chemistry", content: "Periodic Table and basic chemical reactions." }
+      ],
+      history: [
+        { topic: "Ancient History", content: "A brief overview of ancient civilizations." },
+        { topic: "World War II", content: "Key events and outcomes of World War II." }
+      ],
+      english: [
+        { topic: "Grammar", content: "Basic rules of grammar and sentence structure." },
+        { topic: "Literature", content: "Introduction to classic literature works." }
+      ]
+    };
+
+    const exploreForm = document.getElementById("exploreForm");
+    const uploadForm = document.getElementById("uploadForm");
+    const notesList = document.getElementById("notesList");
+    const notesContent = document.getElementById("notesContent");
+    const subjectSelect = document.getElementById("subject");
+
+    exploreForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const subject = subjectSelect.value;
+      if (subject && notesDatabase[subject]) {
+        notesList.hidden = false;
+        uploadForm.hidden = false;
+
+        notesContent.innerHTML = notesDatabase[subject]
+          .map(
+            (note) =>
+              `<div class="note-item"><h4>${note.topic}</h4><p>${note.content}</p></div>`
+          )
+          .join("");
+      }
+    });
+
+    uploadForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const subject = subjectSelect.value;
+      const topic = document.getElementById("topic").value;
+      const notes = document.getElementById("notes").value;
+
+      if (subject && topic && notes) {
+        if (!notesDatabase[subject]) notesDatabase[subject] = [];
+        notesDatabase[subject].push({ topic, content: notes });
+
+        document.getElementById("topic").value = "";
+        document.getElementById("notes").value = "";
+
+        notesContent.innerHTML = notesDatabase[subject]
+          .map(
+            (note) =>
+              `<div class="note-item"><h4>${note.topic}</h4><p>${note.content}</p></div>`
+          )
+          .join("");
+        alert("Notes uploaded successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
